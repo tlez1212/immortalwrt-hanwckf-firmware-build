@@ -1,9 +1,9 @@
-# xiaomi-ax3000t-immortalwrt-hanwckf-firmware-build
+# redmi-ax6000-immortalwrt-hanwckf-firmware-build
 
 ## Project Overview  
 
 This project utilizes GitHub Actions to compile [Hanwckf's ImmortalWrt](https://github.com/hanwckf/immortalwrt-mt798x) firmware and the corresponding [U-Boot](https://github.com/hanwckf/bl-mt798x). 
-It is primarily configured for building the Xiaomi AX3000T router firmware, providing a convenient firmware building process.  
+It is primarily configured for building the Redmi AX6000 router firmware, providing a convenient firmware building process.  
 
 本项目利用 GitHub Actions 编译 [Hanwckf's ImmortalWrt](https://github.com/hanwckf/immortalwrt-mt798x) 固件及相应的 [U-Boot](https://github.com/hanwckf/bl-mt798x)。 
 其主要配置用于构建 红米AX6000 路由器固件构建过程。
