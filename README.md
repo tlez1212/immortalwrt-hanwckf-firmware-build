@@ -8,15 +8,15 @@ This project utilizes GitHub Actions to compile [Hanwckf's ImmortalWrt](https://
 
 ## Default Configuration  
 
-- **Default LAN IP**: `192.168.31.1`  
+- **Default LAN IP**: `192.168.1.1`  
 
-- **默认 LAN IP**: `192.168.31.1`  
+- **默认 LAN IP**: `192.168.1.1`  
 
 ## Custom Build  
 
-If you need to customize the firmware configuration, feel free to fork this repository and modify it according to your requirements. 
+If you need to customize the firmware configuration, please fork the project and modify it according to your needs.
 
-如果您需要自定义固件配置，请 Fork 项目并根据您的需求进行修改。
+如果需要自定义固件配置，请 Fork 项目并根据需要进行修改。
 
 ## License  
 
