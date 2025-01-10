@@ -1,10 +1,10 @@
-# redmi-ax6000-immortalwrt-hanwckf-firmware-build
+# Redmi-ax6000-immortalwrt-hanwckf-firmware-build
 
 ## Project Overview  
 
 This project utilizes GitHub Actions to compile [Hanwckf's ImmortalWrt](https://github.com/hanwckf/immortalwrt-mt798x) firmware for the Redmi AX6000 wireless router.
 
-本项目利用 GitHub Actions 编译 [Hanwckf's ImmortalWrt](https://github.com/hanwckf/immortalwrt-mt798x) 红米AX6000 无线路由器固件。
+本项目利用 GitHub Actions 编译 [Hanwckf's ImmortalWrt](https://github.com/hanwckf/immortalwrt-mt798x) 红米 AX6000 无线路由器固件。
 
 ## Default Configuration  
 
