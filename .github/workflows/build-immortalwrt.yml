@@ -78,9 +78,9 @@ jobs:
     - name: Update golang version
       run: |
         cd openwrt
-        git clone -b master --single-branch https://github.com/immortalwrt/packages.git packages_master
         rm -rf feeds/packages/lang/golang/
-        cp -r packages_master/lang/golang feeds/packages/lang/
+        git clone -b master --depth=1 https://github.com/immortalwrt/packages.git packages_master
+        mv packages_master/lang/golang feeds/packages/lang/
         rm -rf packages_master
         
     - name: remove and update Xray-core
