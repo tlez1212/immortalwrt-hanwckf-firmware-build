@@ -1,9 +1,6 @@
-name: Build ImmortalWrt Firmware
+name: Build ImmortalWrt-mt798x Firmware
 on:
-  schedule:
-    - cron: "0 0 20 * *"
   workflow_dispatch:
-
 
 env:
   REPO_URL: https://github.com/hanwckf/immortalwrt-mt798x.git
@@ -39,7 +36,7 @@ jobs:
         large-packages: true
         swap-storage: false
 
-    - name: Checkout
+    - name: Checkout Code
       uses: actions/checkout@main
 
     - name: Initialization environment
@@ -77,7 +74,22 @@ jobs:
 
     - name: Update feeds
       run: cd openwrt && ./scripts/feeds update -a
-
+      
+    - name: Update golang version
+      run: |
+        cd openwrt
+        git clone -b master --single-branch https://github.com/immortalwrt/packages.git packages_master
+        rm -rf feeds/packages/lang/golang/
+        cp -r packages_master/lang/golang feeds/packages/lang/
+        rm -rf packages_master
+        
+    - name: remove and update Xray-core
+      run: |
+        cd openwrt
+        rm -rf feeds/packages/net/{chinadns-ng,hysteria,ipt2socks,microsocks,naiveproxy,pdnsd-alt,simple-obfs,tcping,trojan-go,trojan-plus,trojan,tuic-client,v2ray-core,v2ray-geodata,v2ray-plugin,xray-core,xray-plugin}
+        git clone https://github.com/xiaorouji/openwrt-passwall2 package/openwrt-passwall2
+        git clone https://github.com/xiaorouji/openwrt-passwall-packages package/openwrt-passwall-packages
+        
     - name: Install feeds
       run: cd openwrt && ./scripts/feeds install -a
 
@@ -145,7 +157,7 @@ jobs:
       run: |
         echo "release_tag=ImmortalWrt_$(date +"%Y.%m.%d-%H%M")" >> $GITHUB_OUTPUT
         touch release.txt
-        echo "ImmortalWrt 🌝 xiaomi ax3000t" >> release.txt
+        echo "ImmortalWrt redmi ax6000" >> release.txt
         echo "status=success" >> $GITHUB_OUTPUT
 
     - name: Upload firmware to release
