@@ -83,12 +83,12 @@ jobs:
         mv packages_master/lang/golang feeds/packages/lang/
         rm -rf packages_master
         
-    - name: remove and update Xray-core
-      run: |
-        cd openwrt
-        rm -rf feeds/packages/net/{chinadns-ng,hysteria,ipt2socks,microsocks,naiveproxy,pdnsd-alt,simple-obfs,tcping,trojan-go,trojan-plus,trojan,tuic-client,v2ray-core,v2ray-geodata,v2ray-plugin,xray-core,xray-plugin}
-        git clone https://github.com/xiaorouji/openwrt-passwall2 package/openwrt-passwall2
-        git clone https://github.com/xiaorouji/openwrt-passwall-packages package/openwrt-passwall-packages
+#    - name: remove and update Xray-core
+#      run: |
+#        cd openwrt
+#        rm -rf feeds/packages/net/{chinadns-ng,hysteria,ipt2socks,microsocks,naiveproxy,pdnsd-alt,simple-obfs,tcping,trojan-go,trojan-plus,trojan,tuic-client,v2ray-core,v2ray-geodata,v2ray-plugin,xray-core,xray-plugin}
+#        git clone https://github.com/xiaorouji/openwrt-passwall2 package/openwrt-passwall2
+#        git clone https://github.com/xiaorouji/openwrt-passwall-packages package/openwrt-passwall-packages
         
     - name: Install feeds
       run: cd openwrt && ./scripts/feeds install -a
