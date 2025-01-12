@@ -80,16 +80,18 @@ jobs:
         cd openwrt
         rm -rf feeds/packages/lang/golang/
         git clone -b master --depth=1 https://github.com/immortalwrt/packages.git packages_master
-        mv packages_master/lang/golang feeds/packages/lang/
+        cp -r packages_master/lang/golang feeds/packages/lang/
         rm -rf packages_master
-        
-#    - name: remove and update Xray-core
-#      run: |
-#        cd openwrt
-#        rm -rf feeds/packages/net/{chinadns-ng,hysteria,ipt2socks,microsocks,naiveproxy,pdnsd-alt,simple-obfs,tcping,trojan-go,trojan-plus,trojan,tuic-client,v2ray-core,v2ray-geodata,v2ray-plugin,xray-core,xray-plugin}
-#        git clone https://github.com/xiaorouji/openwrt-passwall2 package/openwrt-passwall2
-#        git clone https://github.com/xiaorouji/openwrt-passwall-packages package/openwrt-passwall-packages
-        
+
+    - name: Update xray-core version
+      run: |
+        cd openwrt
+        rm -rf feeds/packages/net/{brook,chinadns-ng,dns2socks,dns2tcp,geoview,gn,hysteria,ipt2socks,microsocks,naiveproxy,pdnsd-alt,shadowsocks-libev,shadowsocksr-libev,shadowsocks-rust,simple-obfs,sing-box,ssocks,tcping,trojan,trojan-go,trojan-plus,tuic-client,v2ray-core,v2ray-geodata,v2ray-plugin,xray-core,xray-plugin}
+        cp -r feeds/passwall_packages/* feeds/packages/net/
+
+    - name: Update feeds and rebuild packages index
+      run: cd openwrt && ./scripts/feeds update packages
+                
     - name: Install feeds
       run: cd openwrt && ./scripts/feeds install -a
 
