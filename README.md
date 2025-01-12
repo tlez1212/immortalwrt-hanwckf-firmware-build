@@ -1,4 +1,4 @@
-# Redmi-ax6000-immortalwrt-hanwckf-firmware-build
+# hanwckf's immortalwrt-mt798x_passwall2-firmware-build
 
 ## Project Overview  
 
@@ -6,6 +6,9 @@ This project utilizes GitHub Actions to compile [Hanwckf's ImmortalWrt](https://
 
 本项目利用 GitHub Actions 编译 [Hanwckf's ImmortalWrt](https://github.com/hanwckf/immortalwrt-mt798x) 红米 AX6000 无线路由器固件。
 因hanwckf's immortalwrt-mt798x为openwrt-21.02版本，如果加入passwall2源进行编译会报错，项目主要解决passwall2编译相关依赖包时golang版本过低等问题。
+
+**项目默认built-in passwall2**
+
 ## Default Configuration  
 
 - **Default LAN IP**: `192.168.1.1`  
