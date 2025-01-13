@@ -1,4 +1,4 @@
-name: Build ImmortalWrt-mt798x Firmware
+name: Build ImmortalWrt-redmi-ax6000 Firmware
 on:
   workflow_dispatch:
 
