@@ -1,4 +1,4 @@
-name: Build ImmortalWrt-mt798x Firmware
+name: Build ImmortalWrt-360t7 Firmware
 on:
   workflow_dispatch:
 
