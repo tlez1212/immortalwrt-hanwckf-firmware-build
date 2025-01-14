@@ -2,10 +2,10 @@
 
 ## Project Overview  
 
-This project utilizes GitHub Actions to compile [Hanwckf's ImmortalWrt](https://github.com/hanwckf/immortalwrt-mt798x) firmware for the Redmi AX6000 wireless router.
+This project utilizes GitHub Actions to compile [Hanwckf's ImmortalWrt](https://github.com/hanwckf/immortalwrt-mt798x) firmware for the Redmi AX6000 and 360T7 wireless router.
 
-本项目利用 GitHub Actions 编译 [Hanwckf's ImmortalWrt](https://github.com/hanwckf/immortalwrt-mt798x) 红米 AX6000 无线路由器固件。
-因hanwckf's immortalwrt-mt798x为openwrt-21.02版本，如果加入passwall2源进行编译会报错，项目主要解决passwall2编译相关依赖包时golang版本过低等问题。
+本项目利用 GitHub Actions 编译 [Hanwckf's ImmortalWrt](https://github.com/hanwckf/immortalwrt-mt798x) 红米 AX6000 和 360T7 无线路由器固件。
+因hanwckf's immortalwrt-mt798x为openwrt-21.02版本，项目主要解决passwall2编译相关依赖包时golang版本过低等问题。
 
 **项目默认built-in passwall2**
 
